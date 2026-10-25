@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>ReThread</title>
+</head>
+<body>
+  <header>
+    <h1>♻️ ReThread</h1>
+    <p class="tagline">Shop it second-hand instead</p>
+  </header>
+
+  <div id="status" class="status">Scanning this page…</div>
+
+  <section id="detected" class="detected" hidden>
+    <span class="label">We detected:</span>
+    <span id="metaText" class="meta-text"></span>
+  </section>
+
+  <section id="results" class="results"></section>
+
+  <section id="deeplinks" class="deeplinks" hidden>
+    <span class="label">Keep looking on:</span>
+    <div id="deeplinkRow" class="deeplink-row"></div>
+  </section>
+
+  <footer id="footer" class="footer" hidden></footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
