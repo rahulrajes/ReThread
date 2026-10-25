@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "ReThread",
+  "version": "2.0",
+  "description": "Find sustainable, second-hand alternatives to fast-fashion items in real time.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "*://*.hm.com/*",
+    "*://*.shein.com/*",
+    "*://*.zara.com/*",
+    "*://*.fashionnova.com/*",
+    "*://*.forever21.com/*",
+    "*://*.uniqlo.com/*",
+    "*://*.gap.com/*",
+    "*://*.hollister.com/*",
+    "*://*.abercrombie.com/*",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.hm.com/*",
+        "*://*.shein.com/*",
+        "*://*.zara.com/*",
+        "*://*.fashionnova.com/*",
+        "*://*.forever21.com/*",
+        "*://*.uniqlo.com/*",
+        "*://*.gap.com/*",
+        "*://*.hollister.com/*",
+        "*://*.abercrombie.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
